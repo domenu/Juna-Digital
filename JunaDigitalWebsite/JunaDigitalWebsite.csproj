@@ -139,10 +139,6 @@
     <Content Include="Images\icons\menu-icons2.png" />
     <Content Include="Images\icons\search.png" />
     <Content Include="Images\icons\search2.png" />
-    <Content Include="Images\icons\service-icon-1.png" />
-    <Content Include="Images\icons\service-icon-2.png" />
-    <Content Include="Images\icons\service-icon-3.png" />
-    <Content Include="Images\icons\service-icon-4.png" />
     <Content Include="Images\icons\social-icons2.png" />
     <Content Include="Images\icons\weather-icons.png" />
     <Content Include="Images\icons\weather-main.png" />
