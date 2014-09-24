@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JunaDigitalWebsite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,9 +14,9 @@ namespace JunaDigitalWebsite.Controllers
       return View();
       }
 
-    //public JsonResult SendQuestionMail()
-    //  {
-
-    //  }
+    public JsonResult SendMessage(MessageModel messageModel)
+      {
+      return Json(new { MessageSent = true });
+      }
     }
   }
