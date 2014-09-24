@@ -13,5 +13,9 @@ namespace JunaDigitalWebsite.Controllers
       return View();
       }
 
+    //public JsonResult SendQuestionMail()
+    //  {
+
+    //  }
     }
   }
