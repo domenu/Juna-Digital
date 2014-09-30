@@ -1,8 +1,9 @@
 ﻿$('#contactForm').submit(function (event) {
     event.preventDefault();
 
+    var url = $('#messageUrl').val();
     var formData = $('#contactForm').serialize();
-    $.post('/home/sendmessage', formData, function (result) {
+    $.post(url, formData, function (result) {
         if (result.MessageSent) {
             $('#contactForm').hide();
             $('#mailSentAlert').show();
