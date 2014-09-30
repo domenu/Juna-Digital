@@ -143,6 +143,7 @@
     <Content Include="Images\icons\weather-icons.png" />
     <Content Include="Images\icons\weather-main.png" />
     <Content Include="Images\sky.jpg" />
+    <Content Include="Images\sky2.jpg" />
     <Content Include="Images\spinner.gif" />
     <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
