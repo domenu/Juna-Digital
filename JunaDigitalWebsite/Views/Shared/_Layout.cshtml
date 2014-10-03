@@ -9,16 +9,7 @@
     <meta name="author" content="Juna Digital, Dominique Menu">
     <title>Juna Digital - Software op maat - .NET & Front end development - IT Consultancy</title>
 
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!-- Fonts -->
-    <link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="~/Content/animate.css" rel="stylesheet" />
-    <!-- Squad theme CSS -->
-    <link href="~/Content/style.css" rel="stylesheet">
-    <link href="~/Content/color.css" rel="stylesheet">
-
-    @*@Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")*@
+    @Styles.Render("~/Content/css")
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
     <!-- Preloader -->
@@ -31,7 +22,7 @@
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
-                </button>             
+                </button>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +47,7 @@
         <!-- /.container -->
     </nav>
 
-   @RenderBody()
+    @RenderBody()
 
     <footer>
         <div class="container">
@@ -74,15 +65,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- Core JavaScript Files -->
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/jquery.easing.min.js"></script>
-    <script src="~/Scripts/jquery.scrollTo.js"></script>
-    <script src="~/Scripts/wow.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="~/Scripts/custom.js"></script>
-    @RenderSection("scripts")
+    @Scripts.Render("~/Scripts/bundle")
+    @RenderSection("scripts", false)
 </body>
 </html>
