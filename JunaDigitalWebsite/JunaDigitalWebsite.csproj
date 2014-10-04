@@ -162,6 +162,7 @@
       <DependentUpon>jquery-1.10.2.js</DependentUpon>
     </None>
     <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\ga.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js">
       <DependentUpon>jquery-1.10.2.js</DependentUpon>
