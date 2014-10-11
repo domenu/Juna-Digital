@@ -21,6 +21,7 @@ namespace JunaDigitalWebsite.Controllers
     public JsonResult SendMessage(MessageModel messageModel)
       {
       var mailTo = ConfigurationManager.AppSettings["ContactMailTo"];
+      var user = ConfigurationManager.AppSettings["ContactSmtpUser"];
       var pwd = ConfigurationManager.AppSettings["ContactSmtpPwd"];
 
       var from = new MailAddress(messageModel.Email, messageModel.Name);
@@ -33,13 +34,13 @@ namespace JunaDigitalWebsite.Controllers
         EnableSsl = true,
         DeliveryMethod = SmtpDeliveryMethod.Network,
         UseDefaultCredentials = false,
-        Credentials = new NetworkCredential(from.Address, pwd)
+        Credentials = new NetworkCredential(user, pwd)
       };
 
       var message = new MailMessage(from, to)
             {
-              Subject = "Contact from Juna Digital Website",
-              Body = messageModel.Message
+              Subject = string.Format("Contact from Juna Digital Website from {0}", from.Address),
+              Body = string.Format("{0} send the following message:\r\n\r\n{1}", from.Address, messageModel.Message)
             };
 
       smtp.Send(message);
