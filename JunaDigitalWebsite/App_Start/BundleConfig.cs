@@ -19,11 +19,6 @@ namespace JunaDigitalWebsite
                                                     "~/Scripts/custom.js",
                                                     "~/Scripts/site.js");
 
-      if (ConfigurationManager.AppSettings["Environment"] == "Release")
-      {
-        scriptBundle.Include("~/Scripts/ga.js");
-      }
-
       bundles.Add(scriptBundle);
 
       bundles.Add(new StyleBundle("~/Content/css").Include(
